@@ -3,18 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Registeration</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 </head>
 <body>
-    <h1>Register Here</h1><br>
 
-    <label>Name</label>
-    <input type="text"><br>
-    <label>Email</label>
-    <input type="email"><br>
-    <label>Password</label>
-    <input type="password"><br>
-    <label>Confirm Password</label>
-    <input type="password"><br><br>
-    <button type="submit">Register</button>
+    <div style="margin-top: 180px;" class="ui container">
+        <h1 class="ui center aligned header" style="font-size:45px">Register Here</h1><br>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="ui message">
+                    <ul class="list">
+                        {% for message in messages %}
+                            <li>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        {% endwith %}
+        <form class="ui form" action="/register" method="post">
+            <label style="font-size:20px">Name</label>
+            <input name="Name" type="text" required><br><br>
+            <label style="font-size:20px">Email</label>
+            <input name="Email" type="email" required><br><br>
+            <label style="font-size:20px">Password</label>
+            <input name="Password" type="password" required><br><br>
+            <label style="font-size:20px">Confirm Password</label>
+            <input name="Cnf_Password" type="password" required><br><br>
+            <button type="submit" class="ui blue button">Register</button>
+
+        </form>
+        <br>
+    <div class="ui buttons">
+            <form action="{{url_for('home')}}">
+                <button type="submit"  class="ui blue button"> Go To home Page</button>
+            </form>
+            <div class="or"></div>
+            <form action="{{url_for('login')}}">
+                <button type="submit"  class="ui grey button"> Go To Login Page</button>
+            </form>
+    </div>
+    </div>
 </body>
 </html>

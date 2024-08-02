@@ -2,32 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ToDO App</title>
+    <title>ToDo App</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 </head>
 <body>
-<div style="margin-top: 100px;" class="ui container">
-    <h1 class="ui center aligned header" ><font size="25">Welcome to To-Do List Application!</font> </h1><br>
+    <div style="margin-top: 100px;" class="ui container">
+        <h1 class="ui center aligned header" style="font-size:45px">Welcome to To-Do List Application!</h1><br>
 
-    <p class="paragraph"><font size="4">Stay organized and boost your productivity with our simple and user-friendly To-Do List app. Whether you're managing daily tasks, planning a project, or just keeping track of things to do, this app is designed to help you stay on top of your priorities.</font></p>
+        <p class="paragraph" style="font-size:20px">Stay organized and boost your productivity with our simple and user-friendly To-Do List app. Whether you're managing daily tasks, planning a project, or just keeping track of things to do, this app is designed to help you stay on top of your priorities.</p>
 
-    <h3 ><font size="4">Features:</font></h3>
-    <ul>
-        <li><font size="3"><strong>Authentication:</strong>  Securely sign up and log in to access your personalized task list.</font></li>
-        <li><font size="3"><strong>Task Management:</strong>  Easily add, update, and delete tasks as you go.</font></li>
-        <li><font size="3"><strong>Task Completion:</strong>  Mark tasks as complete and keep track of what you've accomplished.</font></li>
-        <li><font size="3"><strong>Responsive Design:</strong>  Enjoy a seamless experience on both desktop and mobile devices.</font></li>
-        <li><font size="3"><strong>Personalized Experience:</strong>  Your tasks are linked to your account, so you can access them from any device after logging in.</font></li>
-    </ul><br>
-    <p><font size="4">Get started now by creating an account or logging in to manage your tasks efficiently!</font></p><br>
-
-    <button class="ui grey button" type="submit" formaction="/register">Register </button>
-    <button class="ui blue button" type="submit" formaction="/login"> Log In </button>
-
-
-</div>
+        <h3 style="font-size:20px">Features:</h3>
+        <ul style="font-size:18px">
+            <li><strong>Authentication:</strong>  Securely sign up and log in to access your personalized task list.</li>
+            <li><strong>Task Management:</strong>  Easily add, update, and delete tasks as you go.</li>
+            <li><strong>Task Completion:</strong>  Mark tasks as complete and keep track of what you've accomplished.</li>
+            <li><strong>Responsive Design:</strong>  Enjoy a seamless experience on both desktop and mobile devices.</li>
+            <li><strong>Personalized Experience:</strong>  Your tasks are linked to your account, so you can access them from any device after logging in.</li>
+        </ul><br>
+        <p style="font-size:20px">Get started now by creating an account or logging in to manage your tasks efficiently!</p><br>
+        <div class="ui buttons">
+            <form action="{{url_for('login')}}">
+                <button type="submit"  class="ui blue button"> Go To Login Page</button>
+            </form>
+            <div class="or"></div>
+            <form action="{{url_for('register')}}">
+                <button type="submit"  class="ui grey button"> Go To Registration Page</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
 
