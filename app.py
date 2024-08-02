@@ -7,7 +7,7 @@ app=Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SECRET_KEY'] = 'fa2ddd7e0cbaa3933f0f4cadc9bc7a90d68ec19cd3cc7000c6a65e9055f0639e'
+app.config['SECRET_KEY'] = 'key'
 
 db = SQLAlchemy(app)
 
